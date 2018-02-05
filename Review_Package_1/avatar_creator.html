@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>AVATAR CREATOR</title>
+	<style>
+		#header {
+			width:30vw;
+			position:absolute;
+			text-align:center;
+			left:0px;
+			right:0px;
+			top:100px;
+			margin:auto;
+			border-bottom:1px solid #CCC;
+		}
+		#centerBox {
+			width:30vw;
+			height:30vh;
+			text-align:center;
+			position:absolute;
+			top:0px;
+			bottom:0px;
+			left:0px;
+			right:0px;
+			margin:auto;
+			
+			
+		}
+		#menuBox {
+			width:75px;
+			height:45vh;
+			position:fixed;
+			top:0px;
+			right:-75px;			
+			
+		}
+		#buttonBox {
+			width:50px;
+			height:8%;
+			position:absolute;
+			top:0px;
+			left:-53px;
+			border:2px solid #CCC;
+			text-align:center;
+			
+		}
+		#ava1 {
+			height:100%;
+			width:auto;
+			position:absolute;
+			top:0px;
+			bottom:0px;
+			right:0px;
+			left:0px;
+			margin:auto;
+		}
+		#upBox {
+			height:8%;
+			width:14%;
+			position:absolute;
+			left:0px;
+			right:0px;
+			top:0px;
+			margin:auto;
+			border:2px solid #CCC;
+		}
+		#downBox {
+			height:8%;
+			width:14%;
+			position:absolute;
+			left:0px;
+			right:0px;
+			bottom:-24%;
+			margin:auto;
+			border:2px solid #CCC;
+			
+		}
+		#leftBox {
+			height:9%;
+			width:18%;
+			position:absolute;
+			left:0px;
+			top:0px;
+			bottom:0px;
+			margin:auto;
+			border:2px solid #CCC;
+			background-color:#CCD;
+		}
+		#rightBox {
+			height:9%;
+			width:18%;
+			position:absolute;
+			right:0px;
+			top:0px;
+			bottom:0px;
+			margin:auto;
+			border:2px solid #CCC;
+			background-color:#CCD;
+		}
+		#avatar1 {
+			height:-8%;
+			width:20%;		
+			position:absolute;
+			left:16%;
+			bottom:-12%;
+			border:2px solid #CCC;
+			text-align:auto;
+		}
+		#avatar2 {
+		
+			height:-8%;
+			width:20%;
+			position:absolute;
+			left:38%;
+			bottom:-12%;
+			border:2px solid #CCC;
+		}
+		#zoomIn {
+			height:-8%;
+			width:10%;
+			position:absolute;
+			left:60%;
+			bottom:-12%;
+			border:2px solid #CCC;
+		}
+		#zoomOut {
+			height:-8%;
+			width:10%;
+			position:absolute;
+			left:72%;
+			bottom:-12%;
+			border:2px solid #CCC;
+		}
+		
+		#but1 {
+			width:100%;
+			height:auto;
+			
+		}
+		#but2 {
+			width:100%;
+			height:auto;
+		}
+		#but3 {
+			width:100%;
+			height:auto;
+		}
+		.controls {
+			transition:2s;
+			opacity:1;
+		}
+		#showImg {
+			position:absolute;
+			width:18px;
+			height:18vh;
+			right:25%;
+			bottom:15%;
+			
+			
+		}
+		#hat {
+			height:100%;
+			width:auto;
+			position:absolute;
+			display:none;
+		}
+		#shirt {
+			height:100%;
+			width:auto;
+			position:absolute;
+			display:none;
+		}
+		#bow {
+			height:100%;
+			width:auto;
+			position:absolute;
+			display:none;
+		}
+	
+	</style>
+	
+	
+	<body>
+		<div id="header">
+		AVATAR CREATOR
+		</div>
+		
+		<div id="centerBox">
+			<img src="ava1.png" id="ava1" />
+			
+			<div class="controls" id="upBox">
+			up
+			</div> 
+			<div class="controls" id="downBox">
+			down
+			</div>
+			<div class="controls" id="leftBox">
+			left
+			</div>
+			<div class="controls" id="rightBox">
+			right
+			</div>
+			
+			<div class="controls" id="avatar1">
+			Avatar 1
+			</div>
+			<div  class="controls" id="avatar2">
+			Avatar 2
+			</div>
+			<div class="controls" id="zoomIn">
+			+
+			</div>
+			<div class="controls" id="zoomOut">
+			-
+			</div>
+		</div>
+		<div id="menuBox">
+			<img src="but1.png" id="but1" />
+			<img src="but2.png" id="but2" />
+			<img src="but3.png" id="but3" />
+			<div id="buttonBox">
+			button
+			</div>
+		</div>	
+		<div id="showImg">
+			<img src="hat.png" id="hat" />
+			<img src="shirt.png" id="shirt" />
+			<img src="bow.png" id="bow" />			
+		</div>	
+		
+		<script>
+			var myImg = document.getElementById("ava1");
+			var myCenterBox = document.getElementById("centerBox");
+			var myMenuBox = document.getElementById("menuBox");
+			num1=0;
+			num2=0;
+			num3=100;
+			num4=-75;
+			
+			document.getElementById("avatar1").addEventListener("click", function(){
+				myImg.src = "ava1.png";
+			});
+			document.getElementById("avatar2").addEventListener("click", function(){
+				myImg.src = "ava2.png";
+			});		
+			document.getElementById("upBox").addEventListener("click", function(){
+				num1=num1+7;
+				myCenterBox.style.bottom = num1+"px";
+							
+			});
+			document.getElementById("downBox").addEventListener("click", function(){
+				num1=num1-7;
+				myCenterBox.style.bottom=num1+"px";
+			});
+			document.getElementById("leftBox").addEventListener("click", function(){
+				num2=num2+7;
+				myCenterBox.style.right =num2+"px";
+			});
+			document.getElementById("rightBox").addEventListener("click", function(){
+				num2=num2-7;
+				myCenterBox.style.right = num2+"px";
+			});
+			document.getElementById("zoomIn").addEventListener("click", function(){
+				num3=num3+1
+				myCenterBox.style.zoom = num3+"%";
+			});
+			document.getElementById("zoomOut").addEventListener("click", function(){
+				num3=num3-1
+				myCenterBox.style.zoom = num3+"%";
+			});
+			document.getElementById("buttonBox").addEventListener("click", function(){				
+				num4=0-num4
+				myMenuBox.style.right = num4+"px";
+				document.getElementById("buttonBox").style.border = "2px solid #5ce5fb";
+			});
+			myImg.addEventListener("click", function(){
+				document.getElementById("upBox").style.opacity="0";
+				document.getElementById("downBox").style.opacity="0";
+				document.getElementById("leftBox").style.opacity="0";
+				document.getElementById("rightBox").style.opacity="0";
+				document.getElementById("avatar1").style.opacity="0";
+				document.getElementById("avatar2").style.opacity="0";
+				document.getElementById("zoomIn").style.opacity="0";
+				document.getElementById("zoomOut").style.opacity="0";
+				
+			});
+			document.getElementById("header").addEventListener("click", function(){
+				document.getElementById("upBox").style.opacity="1";
+				document.getElementById("downBox").style.opacity="1";
+				document.getElementById("leftBox").style.opacity="1";
+				document.getElementById("rightBox").style.opacity="1";
+				document.getElementById("avatar1").style.opacity="1";
+				document.getElementById("avatar2").style.opacity="1";
+				document.getElementById("zoomIn").style.opacity="1";
+				document.getElementById("zoomOut").style.opacity="1";
+				
+			});
+			document.getElementById("but1").addEventListener("click", function(){
+				document.getElementById("hat").style.display = "block";
+				document.getElementById("but1").style.border = "1px solid #CCC";
+			});
+			document.getElementById("but2").addEventListener("click", function(){
+				document.getElementById("shirt").style.display = "block";
+				document.getElementById("but2").style.border = "1px solid #CCC";
+			});
+			document.getElementById("but3").addEventListener("click", function(){
+				document.getElementById("bow").style.display = "block";
+				document.getElementById("but3").style.border = "1px solid #CCC";
+				
+			});
+			
+		</script>
+
+	
+	</body>
+
+
+
+</html>
