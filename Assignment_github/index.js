@@ -3,7 +3,7 @@ var myImg2 = document.getElementById("ch2");
 var myImg3 = document.getElementById("ch3");
 num1 = 100;
 num2 = -2;
-	
+num3=13;
 
 document.getElementById("bg1").addEventListener("click", function(){
 	myImg1.style.backgroundImage = "url(i1.jpg)";
@@ -98,21 +98,30 @@ document.getElementById("zoomOut").addEventListener("click", function(){
 
 
 
-document.getElementById("next").addEventListener("click", function(){
-
-	num2=num2+3			
-	myImg1.style.backgroundImage = "url(i"+(num2)+".jpg)";
-	myImg2.style.backgroundImage = "url(i"+(num2+1)+".jpg)";
-	myImg3.style.backgroundImage = "url(i"+(num2+2)+".jpg)";		
-
+document.getElementById("next").addEventListener("click", function(){	
+	num2=num2+3
+	if(num2+2<=12){
+		myImg1.style.backgroundImage = "url(i"+(num2)+".jpg)";
+		myImg2.style.backgroundImage = "url(i"+(num2+1)+".jpg)";
+		myImg3.style.backgroundImage = "url(i"+(num2+2)+".jpg)";	
+		
+	} else{
+		num2=-2
+	}					
 				
 });
 
 document.getElementById("previous").addEventListener("click", function(){
-	num2=num2-3	
-	myImg1.style.backgroundImage = "url(i"+(num2)+".jpg)";
-	myImg2.style.backgroundImage = "url(i"+(num2+1)+".jpg)";
-	myImg3.style.backgroundImage = "url(i"+(num2+2)+".jpg)";
+
+	num3=num3-3	
+	if(num3>=1){
+		myImg1.style.backgroundImage = "url(i"+(num3)+".jpg)";
+		myImg2.style.backgroundImage = "url(i"+(num3+1)+".jpg)";
+		myImg3.style.backgroundImage = "url(i"+(num3+2)+".jpg)";		
+	} else{
+		num3=13
+	}
+	
 		
 });
 
