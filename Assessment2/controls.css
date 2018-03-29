@@ -1,0 +1,62 @@
+.rg {
+	width:5%;
+}
+#colorInp {
+	width:5%;
+}
+#rangeButton {
+	width:8%;
+}
+#numButton {
+	width:10%;
+}
+#randomButton {
+	width:10%;
+}
+#addButton {
+	width:3.5%;
+}
+#autoButton {
+	width:19%;
+	font-size:auto;
+	text-align:center;
+}
+#stopButton {
+	width:16%;
+	text-align:center;
+}
+#numButton {
+	background-color:black;
+	color:white;
+}
+#randomButton {
+	background-color:pink;
+}
+
+#addButton {
+	background-color:gray;
+	
+}
+.nDiv {
+	width:100px;
+	height:100px;
+	position:relative;
+	display:inline-block;
+	background-color:random_color;
+}
+.nImg {
+	width:auto;
+	height:auto;
+	position:absolute;
+	left:0;
+	right:0;
+	margin:auto;
+	
+}	
+#display {
+	width:100%;
+	height:100%;
+	position:relative;
+}
+
+
